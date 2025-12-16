@@ -7,6 +7,7 @@ RDICIDR is a react-app, but if you want to focus on the subnetting code, check t
 ```
 src/lib/ipv4.js
 ```
+Experimenting one commit at a time
 
 You should find there how each property was calculated.
 
