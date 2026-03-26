@@ -6,3 +6,8 @@ test("renders learn react link", () => {
   const linkElement = screen.getByText(/CIDR Calculator/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+test("displays the API URL", () => {
+  render(<App />);
+  expect(screen.getByText(/api\.rdicidr\.com/i)).toBeInTheDocument();
+});
