@@ -2,31 +2,21 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   pull_request:
-    branches:
-    - main
-    - dev
+defaults:
+  run:
+    working-directory: ./rdicidr-0.1.0
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
 
+    steps:
     - name: Check out repository code
       uses: actions/checkout@v5
-    
-    - name: Set the node version to 20
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-    
-    - name: Install dependencies
+    - name: npm install
       run: npm install
-
-    - name: Run Linter (ESLint)
+    - name: npm run lint
       run: npm run lint
-
-    - name: Run Test (Jest)
+    - name: CI=true npm run test
       run: CI=true npm run test
-
-    - name: Run Build
+    - name: npm run build
       run: npm run build
-
-  
