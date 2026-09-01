@@ -14,8 +14,8 @@ permissions:
     contents: read
 
 env:
-    ACR_NAME: fsldevopschallengeacr
-    ACR_LOGIN_SERVER: fsldevopschallengeacr.azurecr.io
+    ACR_NAME: fslchallengeacr
+    ACR_LOGIN_SERVER: fslchallengeacr.azurecr.io
     IMAGE_NAME: rdicidr
     RESOURCE_GROUP: fsl-devops-challenge-rg
     CONTAINER_APP: fsl-challenge
